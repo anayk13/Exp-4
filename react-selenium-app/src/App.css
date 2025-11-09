@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+}
+
+#main-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.counter-section,
+.form-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 20px;
+  min-width: 400px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.counter-section h2,
+.form-section h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+#counter-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+button {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#increment-btn {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+#decrement-btn {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+#reset-btn {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #333;
+}
+
+#name-input {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  margin: 10px 5px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  outline: none;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+#name-input:focus {
+  border-color: #f093fb;
+  box-shadow: 0 0 10px rgba(240, 147, 251, 0.5);
+}
+
+#name-input::placeholder {
+  color: #999;
+}
+
+#greeting-message {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .counter-section,
+  .form-section {
+    min-width: 90%;
+    padding: 20px;
+  }
+
+  #main-title {
+    font-size: 1.8rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
